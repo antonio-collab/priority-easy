@@ -12,6 +12,8 @@
     "rootDir": "./",
     "baseUrl": "./",
     "sourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "App/*": [
         "./app/*"
@@ -24,11 +26,14 @@
       ],
       "Database/*": [
         "./database/*"
-      ]
+      ],
+      "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
     },
     "types": [
       "@adonisjs/core",
-      "@adonisjs/repl",
       "@japa/preset-adonis/build/adonis-typings",
       "@adonisjs/lucid",
       "@adonisjs/auth"

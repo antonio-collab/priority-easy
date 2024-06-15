@@ -5,6 +5,15 @@ export default class Vacancy extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  @column()
+  public description: string
+
+  @column()
+  public latitude: string
+
+  @column()
+  public longitude: string
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 

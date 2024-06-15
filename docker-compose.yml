@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  adonis:
+    build: .
+    ports:
+      - '3333:3333'
+    depends_on:
+      - postgres
+    environment:
+      PG_HOST: postgres
+      PG_PORT: 5432
+      PG_USER: postgres
+      PG_PASSWORD: postgres
+      PG_DB_NAME: adonis_db
+  postgres:
+    image: 'postgres:14'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: adonis_db
+    ports:
+      - '5432:5432'
